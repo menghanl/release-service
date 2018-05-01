@@ -4,6 +4,8 @@ import release from "@/components/release";
 
 Vue.use(Router);
 
+const NotFound = { template: "<div>Not Found</div>" };
+
 export default new Router({
   mode: "history",
   routes: [
@@ -11,6 +13,11 @@ export default new Router({
       path: "/release/:org/:repo/:version",
       name: "release",
       component: release
+    },
+    {
+      path: "*",
+      name: "NotFound",
+      component: NotFound
     }
   ]
 });
