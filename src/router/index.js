@@ -5,12 +5,8 @@ import release from "@/components/release";
 Vue.use(Router);
 
 export default new Router({
+  mode: "history",
   routes: [
-    {
-      path: "/",
-      name: "Hello",
-      component: release
-    },
     {
       path: "/release",
       name: "release",
