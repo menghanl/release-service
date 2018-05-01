@@ -70,7 +70,13 @@ export default {
       this.repo = this.$route.params.repo;
       this.version = this.$route.params.version;
       axios
-        .get(`/api/release`)
+        .get(`/api/release`, {
+          params: {
+            org: this.org,
+            repo: this.repo,
+            version: this.version
+          }
+        })
         .then(response => {
           this.issuesSectioned = splitIssues(response.data);
         })
