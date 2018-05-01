@@ -8,7 +8,7 @@ export default new Router({
   mode: "history",
   routes: [
     {
-      path: "/release",
+      path: "/release/:org/:repo/:version",
       name: "release",
       component: release
     }
