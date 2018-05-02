@@ -6,29 +6,37 @@
       <h4>for {{ org }}/{{ repo }}/{{ version }}</h4>
     </div>
 
-    <div>
-      <b-btn v-b-modal.modal1>Show markdown</b-btn>
-      <b-modal id="modal1" title="Release 1.11.0" size="lg">
-        <b-form-textarea style='font-size: 12px; font-family: monospace' id="markdowntest" :value="issuesToMarkdown(issuesSectioned)" plaintext :rows='20' />
-      </b-modal>
+    <div v-if="loading">
+      <spinner size="huge" message="Loading..."></spinner>
     </div>
 
-    <div v-for="(issues, label) in issuesSectioned" :key="label">
-      <b-card class="m-3">
-        <h4>{{ label }}</h4>
-        <draggable v-model="issuesSectioned[label]" :options="{draggable:'.item'}">
-          <issue class="item" v-for="issue in issues" :key="issue.id" :data="issue" />
-        </draggable>
-      </b-card>
+    <div v-if="!loading">
+      <div>
+        <b-btn v-b-modal.modal1>Show markdown</b-btn>
+        <b-modal id="modal1" title="Release 1.11.0" size="lg">
+          <b-form-textarea style='font-size: 12px; font-family: monospace' id="markdowntest" :value="issuesToMarkdown(issuesSectioned)" plaintext :rows='20' />
+        </b-modal>
+      </div>
+
+      <div v-for="(issues, label) in issuesSectioned" :key="label">
+        <b-card class="m-3">
+          <h4>{{ label }}</h4>
+          <draggable v-model="issuesSectioned[label]" :options="{draggable:'.item'}">
+            <issue class="item" v-for="issue in issues" :key="issue.id" :data="issue" />
+          </draggable>
+        </b-card>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import issue from "@/components/issue.vue";
-import testdata from "@/assets/release-issues.json";
 import draggable from "vuedraggable";
+import Spinner from "vue-simple-spinner";
+
 import axios from "axios";
+import testdata from "@/assets/release-issues.json";
 
 import { splitIssues, sectionToMarkdown } from "@/components/util";
 
@@ -36,6 +44,7 @@ export default {
   name: "release",
   components: {
     draggable,
+    Spinner,
     issue
   },
 
@@ -44,7 +53,8 @@ export default {
       org: "unknown",
       repo: "unknown",
       version: "unknown",
-      issuesSectioned: splitIssues(testdata)
+      loading: true,
+      issuesSectioned: []
     };
   },
 
@@ -66,6 +76,7 @@ export default {
       return ret;
     },
     fetchData() {
+      this.loading = true;
       this.org = this.$route.params.org;
       this.repo = this.$route.params.repo;
       this.version = this.$route.params.version;
@@ -79,9 +90,12 @@ export default {
         })
         .then(response => {
           this.issuesSectioned = splitIssues(response.data);
+          this.loading = false;
         })
         .catch(e => {
           console.log(e);
+          this.issuesSectioned = splitIssues(testdata);
+          this.loading = false;
         });
     }
   }
