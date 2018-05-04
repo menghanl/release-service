@@ -1,16 +1,20 @@
 <template>
   <div>
-    <div class="py-5 text-center">
+    <!-- <div class="py-5 text-center">
       <img class="d-block mx-auto mb-4" src="@/assets/logo.png" alt width="72" height="72">
       <h2>release note generator</h2>
-      <h4>for {{ org }}/{{ repo }}/{{ version }}</h4>
-    </div>
+    </div> -->
+    <b-breadcrumb>
+      <b-breadcrumb-item active="true" :text="org" />
+      <b-breadcrumb-item active="true" :text="repo" />
+      <b-breadcrumb-item active="true" :text="version" />
+    </b-breadcrumb>
 
-    <div v-if="loading">
+    <div v-show="loading">
       <spinner size="huge" message="Loading..."></spinner>
     </div>
 
-    <div v-if="!loading">
+    <div v-show="!loading">
       <div>
         <b-btn v-b-modal.modal1>Show markdown</b-btn>
         <b-modal id="modal1" title="Release 1.11.0" size="lg">
