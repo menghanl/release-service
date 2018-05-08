@@ -18,7 +18,10 @@
             "html_url": "https://github.com/cesarghali",
             "login": "cesarghali"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         }
       ]
@@ -37,7 +40,10 @@
             "html_url": "https://github.com/lyuxuan",
             "login": "lyuxuan"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         }
       ]
@@ -46,19 +52,6 @@
       "name": "New Features",
       "label_name": "Feature",
       "entries": [
-        {
-          "issue_number": 1940,
-          "title": "metadata: Add Get, Set, and Append methods to metadata.MD",
-          "html_url": "https://github.com/grpc/grpc-go/pull/1940",
-          "user": {
-            "avatar_url":
-              "https://avatars0.githubusercontent.com/u/20138116?v=4",
-            "html_url": "https://github.com/zkry",
-            "login": "zkry"
-          },
-          "milestone": null,
-          "special_thanks": false
-        },
         {
           "issue_number": 2019,
           "title":
@@ -70,31 +63,41 @@
             "html_url": "https://github.com/dfawley",
             "login": "dfawley"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         },
         {
-          "issue_number": 1919,
-          "title": "Stage 3: Channelz server implementation",
-          "html_url": "https://github.com/grpc/grpc-go/pull/1919",
+          "issue_number": 2010,
+          "title": "client: introduce WithDisableServiceConfig DialOption",
+          "html_url": "https://github.com/grpc/grpc-go/pull/2010",
           "user": {
             "avatar_url": "https://avatars1.githubusercontent.com/u/426013?v=4",
             "html_url": "https://github.com/lyuxuan",
             "login": "lyuxuan"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         },
         {
-          "issue_number": 1909,
-          "title": "Stage 2: Channelz metric collection",
-          "html_url": "https://github.com/grpc/grpc-go/pull/1909",
+          "issue_number": 1940,
+          "title": "metadata: Add Get, Set, and Append methods to metadata.MD",
+          "html_url": "https://github.com/grpc/grpc-go/pull/1940",
           "user": {
-            "avatar_url": "https://avatars1.githubusercontent.com/u/426013?v=4",
-            "html_url": "https://github.com/lyuxuan",
-            "login": "lyuxuan"
+            "avatar_url":
+              "https://avatars0.githubusercontent.com/u/20138116?v=4",
+            "html_url": "https://github.com/zkry",
+            "login": "zkry"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         },
         {
@@ -107,7 +110,40 @@
             "html_url": "https://github.com/menghanl",
             "login": "menghanl"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
+          "special_thanks": false
+        },
+        {
+          "issue_number": 1811,
+          "title": "channelz: stage 1 - registration and deletion",
+          "html_url": "https://github.com/grpc/grpc-go/pull/1811",
+          "user": {
+            "avatar_url": "https://avatars1.githubusercontent.com/u/426013?v=4",
+            "html_url": "https://github.com/lyuxuan",
+            "login": "lyuxuan"
+          },
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
+          "special_thanks": false
+        },
+        {
+          "issue_number": 1919,
+          "title": "channelz: stage 3 - server implementation",
+          "html_url": "https://github.com/grpc/grpc-go/pull/1919",
+          "user": {
+            "avatar_url": "https://avatars1.githubusercontent.com/u/426013?v=4",
+            "html_url": "https://github.com/lyuxuan",
+            "login": "lyuxuan"
+          },
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         },
         {
@@ -119,7 +155,26 @@
             "html_url": "https://github.com/menghanl",
             "login": "menghanl"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
+          "special_thanks": false
+        },
+        {
+          "issue_number": 1883,
+          "title": "clientconn: add support for unix network in DialContext.",
+          "html_url": "https://github.com/grpc/grpc-go/pull/1883",
+          "user": {
+            "avatar_url":
+              "https://avatars0.githubusercontent.com/u/1249749?v=4",
+            "html_url": "https://github.com/hexfusion",
+            "login": "hexfusion"
+          },
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         },
         {
@@ -133,32 +188,25 @@
             "html_url": "https://github.com/dfawley",
             "login": "dfawley"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         },
         {
-          "issue_number": 1811,
-          "title": "Stage 1: Channelz registration and deletion",
-          "html_url": "https://github.com/grpc/grpc-go/pull/1811",
+          "issue_number": 1909,
+          "title": "channelz: stage 2 - metric collection",
+          "html_url": "https://github.com/grpc/grpc-go/pull/1909",
           "user": {
             "avatar_url": "https://avatars1.githubusercontent.com/u/426013?v=4",
             "html_url": "https://github.com/lyuxuan",
             "login": "lyuxuan"
           },
-          "milestone": null,
-          "special_thanks": false
-        },
-        {
-          "issue_number": 1883,
-          "title": "clientconn: add support for unix network in DialContext.",
-          "html_url": "https://github.com/grpc/grpc-go/pull/1883",
-          "user": {
-            "avatar_url":
-              "https://avatars0.githubusercontent.com/u/1249749?v=4",
-            "html_url": "https://github.com/hexfusion",
-            "login": "hexfusion"
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
           },
-          "milestone": null,
           "special_thanks": false
         }
       ]
@@ -178,7 +226,10 @@
             "html_url": "https://github.com/MakMukhi",
             "login": "MakMukhi"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         }
       ]
@@ -197,7 +248,26 @@
             "html_url": "https://github.com/MakMukhi",
             "login": "MakMukhi"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
+          "special_thanks": false
+        },
+        {
+          "issue_number": 1979,
+          "title":
+            "createTransport: check for SHUTDOWN before assigning TransientFailure to ac.state",
+          "html_url": "https://github.com/grpc/grpc-go/pull/1979",
+          "user": {
+            "avatar_url": "https://avatars1.githubusercontent.com/u/426013?v=4",
+            "html_url": "https://github.com/lyuxuan",
+            "login": "lyuxuan"
+          },
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         },
         {
@@ -211,7 +281,10 @@
             "html_url": "https://github.com/jhump",
             "login": "jhump"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         }
       ]
@@ -221,15 +294,49 @@
       "label_name": "Documentation",
       "entries": [
         {
-          "issue_number": 1981,
-          "title": "resolver/dns: Typo in lookupHost failure warning",
-          "html_url": "https://github.com/grpc/grpc-go/pull/1981",
+          "issue_number": 1971,
+          "title":
+            "documentation: mark compresser and decompresser as deprecated",
+          "html_url": "https://github.com/grpc/grpc-go/pull/1971",
           "user": {
-            "avatar_url": "https://avatars1.githubusercontent.com/u/187831?v=4",
-            "html_url": "https://github.com/keegancsmith",
-            "login": "keegancsmith"
+            "avatar_url": "https://avatars2.githubusercontent.com/u/960845?v=4",
+            "html_url": "https://github.com/menghanl",
+            "login": "menghanl"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
+          "special_thanks": false
+        },
+        {
+          "issue_number": 2006,
+          "title": "documentation: add instructions for running tests locally",
+          "html_url": "https://github.com/grpc/grpc-go/pull/2006",
+          "user": {
+            "avatar_url": "https://avatars2.githubusercontent.com/u/960845?v=4",
+            "html_url": "https://github.com/menghanl",
+            "login": "menghanl"
+          },
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
+          "special_thanks": false
+        },
+        {
+          "issue_number": 1951,
+          "title": "Mark old balancer and naming APIs as deprecated",
+          "html_url": "https://github.com/grpc/grpc-go/pull/1951",
+          "user": {
+            "avatar_url": "https://avatars2.githubusercontent.com/u/960845?v=4",
+            "html_url": "https://github.com/menghanl",
+            "login": "menghanl"
+          },
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         },
         {
@@ -242,19 +349,41 @@
             "html_url": "https://github.com/menghanl",
             "login": "menghanl"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         },
         {
-          "issue_number": 1951,
-          "title": "Mark old balancer and naming APIs as deprecated",
-          "html_url": "https://github.com/grpc/grpc-go/pull/1951",
+          "issue_number": 1981,
+          "title": "resolver/dns: Typo in lookupHost failure warning",
+          "html_url": "https://github.com/grpc/grpc-go/pull/1981",
           "user": {
-            "avatar_url": "https://avatars2.githubusercontent.com/u/960845?v=4",
-            "html_url": "https://github.com/menghanl",
-            "login": "menghanl"
+            "avatar_url": "https://avatars1.githubusercontent.com/u/187831?v=4",
+            "html_url": "https://github.com/keegancsmith",
+            "login": "keegancsmith"
           },
-          "milestone": null,
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
+          "special_thanks": false
+        },
+        {
+          "issue_number": 2003,
+          "title": "documentation: add OAuth2 doc and example",
+          "html_url": "https://github.com/grpc/grpc-go/pull/2003",
+          "user": {
+            "avatar_url":
+              "https://avatars1.githubusercontent.com/u/1175430?v=4",
+            "html_url": "https://github.com/enocom",
+            "login": "enocom"
+          },
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
+          },
           "special_thanks": false
         },
         {
@@ -268,32 +397,10 @@
             "html_url": "https://github.com/Chyroc",
             "login": "Chyroc"
           },
-          "milestone": null,
-          "special_thanks": false
-        },
-        {
-          "issue_number": 2006,
-          "title": "documentation: add instructions for running tests locally",
-          "html_url": "https://github.com/grpc/grpc-go/pull/2006",
-          "user": {
-            "avatar_url": "https://avatars2.githubusercontent.com/u/960845?v=4",
-            "html_url": "https://github.com/menghanl",
-            "login": "menghanl"
+          "milestone": {
+            "id": 3229697,
+            "title": "1.12 Release"
           },
-          "milestone": null,
-          "special_thanks": false
-        },
-        {
-          "issue_number": 2003,
-          "title": "documentation: add OAuth2 doc and example",
-          "html_url": "https://github.com/grpc/grpc-go/pull/2003",
-          "user": {
-            "avatar_url":
-              "https://avatars1.githubusercontent.com/u/1175430?v=4",
-            "html_url": "https://github.com/enocom",
-            "login": "enocom"
-          },
-          "milestone": null,
           "special_thanks": false
         }
       ]
