@@ -18,15 +18,15 @@
       <div>
         <b-btn v-b-modal.modal1>Show markdown</b-btn>
         <b-modal id="modal1" title="Release 1.11.0" size="lg">
-          <b-form-textarea style='font-size: 12px; font-family: monospace' id="markdowntest" :value="issuesToMarkdown(issuesSectioned)" plaintext :rows='20' />
+          <b-form-textarea style='font-size: 12px; font-family: monospace' id="markdowntest" :value="generateMarkdown(notes)" plaintext :rows='20' />
         </b-modal>
       </div>
 
-      <div v-for="(issues, label) in issuesSectioned" :key="label">
+      <div v-for="(section, i) in notes.sections" :key="section.name">
         <b-card class="m-3">
-          <h4>{{ label }}</h4>
-          <draggable v-model="issuesSectioned[label]" :options="{draggable:'.item'}">
-            <issue class="item" v-for="issue in issues" :key="issue.id" :data="issue" />
+          <h4>{{ section.name }}</h4>
+          <draggable v-model="notes.sections[i].entries" :options="{draggable:'.item'}">
+            <issue class="item" v-for="issue in notes.sections[i].entries" :key="issue.id" :data="issue" />
           </draggable>
         </b-card>
       </div>
@@ -40,9 +40,9 @@ import draggable from "vuedraggable";
 import Spinner from "vue-simple-spinner";
 
 import axios from "axios";
-import testdata from "@/assets/release-issues.json";
+import testdata from "@/assets/testdata-new.json";
 
-import { splitIssues, sectionToMarkdown } from "@/components/util";
+import { notesToMarkdown } from "@/components/util";
 
 export default {
   name: "release",
@@ -58,7 +58,7 @@ export default {
       repo: "unknown",
       version: "unknown",
       loading: true,
-      issuesSectioned: []
+      notes: []
     };
   },
 
@@ -71,13 +71,8 @@ export default {
   },
 
   methods: {
-    issuesToMarkdown: function() {
-      var ret = "";
-      for (var section in this.issuesSectioned) {
-        ret += "# " + section + "\n";
-        ret += sectionToMarkdown(this.issuesSectioned[section]);
-      }
-      return ret;
+    generateMarkdown() {
+      return notesToMarkdown(this.notes);
     },
     fetchData() {
       this.loading = true;
@@ -93,12 +88,12 @@ export default {
           }
         })
         .then(response => {
-          this.issuesSectioned = splitIssues(response.data);
+          this.notes = response.data;
           this.loading = false;
         })
         .catch(e => {
           console.log(e);
-          this.issuesSectioned = splitIssues(testdata);
+          this.notes = testdata;
           this.loading = false;
         });
     }
