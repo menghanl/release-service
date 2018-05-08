@@ -18,7 +18,7 @@
           <a :href="data.html_url">{{ data.html_url }}</a>
         </p>
         <div>
-          <!-- <b-badge pill :key="data.milestone.id" variant="success">{{ data.milestone.title }}</b-badge> -->
+          <b-badge pill :key="data.milestone.id" variant="success">{{ data.milestone.title }}</b-badge>
           <b-badge pill v-for="label in data.labels" :key="label.id" variant="">{{ label.name }}</b-badge>
         </div>
       </b-card-body>
